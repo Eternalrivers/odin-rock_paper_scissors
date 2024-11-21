@@ -18,3 +18,7 @@ Return a valid choice depending on the user's input
   If user enter's "paper", return "paper"
   If user enter's "scissors", return "scissor"
   Else return "NIL"
+
+Task 3:
+Initialize two counter variable for human score and computer score
+Set both variable's value to zero
