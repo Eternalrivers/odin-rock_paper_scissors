@@ -22,3 +22,13 @@ Return a valid choice depending on the user's input
 Task 3:
 Initialize two counter variable for human score and computer score
 Set both variable's value to zero
+
+Task 4:
+Get humanChoice and computerChoice string values and set as parameters for a new function
+Set humanChoice so that user inputted values is case insensitive
+Obtain round winner between humanChoice and computerChoice by using conditions;
+  "rock beats scissors"
+  "scissor beats paper"
+  "paper beats rock"
+
+ 
