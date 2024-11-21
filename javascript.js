@@ -23,3 +23,10 @@ function getComputerChoice(){
 }
 // Random number generated is assigned a string value.
 
+function getHumanChoice() {
+  
+  let userInput = prompt ("rock, paper, or scissors?");
+
+  console.log (userInput);
+  
+}
