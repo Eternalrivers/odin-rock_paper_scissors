@@ -30,9 +30,8 @@ function getHumanChoice() {
   return (userInput);
   
 }
-
-let humanScore = 0;
-let computerScore = 0;
+let initHumanScore = 0;
+let initComputerScore = 0;
 
 
 let humanSelection = getHumanChoice();
@@ -42,3 +41,32 @@ let computerChoice = getComputerChoice ();
 
 //uses string values from previous functions
 
+function playRound(humanChoice,computerChoice) {
+    console.log (humanChoice);
+    console.log (computerChoice);
+    
+    if (humanChoice === computerChoice) {
+      console.log ("draw");
+  
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
+      console.log ("You lose! Paper beats rock.");
+      return (initComputerScore + 1);
+  
+  } else if (humanChoice === "rock" && computerChoice === "scissors") {
+      console.log ("You won! Rock beats scissors.");
+      return (initHumanScore +1);
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+      console.log ("You lose! Scissors beats paper.");
+      return (initComputerScore + 1);
+  } else if (humanChoice === "paper" && computerChoice === "rock") {
+      console.log ("You won! Paper beats rock.");
+      return (initHumanScore +1);
+  }else if (humanChoice === "scissors" && computerChoice === "paper") {
+      console.log ("You won! Scissors beats paper.");
+      return (initHumanScore +1);
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+      console.log ("You lose! Rock beats scissors.");
+      return (initComputerScore + 1);
+  }
+    console.log(initHumanScore);
+}
