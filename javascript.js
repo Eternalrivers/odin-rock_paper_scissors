@@ -27,9 +27,18 @@ function getHumanChoice() {
   
   let userInput = prompt ("rock, paper, or scissors?");
 
-  console.log (userInput);
-
+  return (userInput);
+  
 }
 
 let humanScore = 0;
 let computerScore = 0;
+
+
+let humanSelection = getHumanChoice();
+
+let humanChoice = humanSelection.toLowerCase();
+let computerChoice = getComputerChoice ();
+
+//uses string values from previous functions
+
