@@ -24,11 +24,17 @@ Initialize two counter variable for human score and computer score
 Set both variable's value to zero
 
 Task 4:
-Get humanChoice and computerChoice string values and set as parameters for a new function
+Get humanChoice and computerChoice string values 
 Set humanChoice so that user inputted values is case insensitive
+Set humanChoice and computerChoice as parameters for a new function
 Obtain round winner between humanChoice and computerChoice by using conditions;
   "rock beats scissors"
   "scissor beats paper"
   "paper beats rock"
+Print string value showing the round winner.
+Increment humanScore or computerScore by 1 depending on the round winner
 
- 
+Task 5:
+Set a new game
+  A new game consists of maximum of 5 rounds
+Repeat each round until either the player reached a score of 3.
