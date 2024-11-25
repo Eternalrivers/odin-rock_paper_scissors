@@ -78,24 +78,28 @@ function playRound(humanChoice,computerChoice) {
 
 function finalScore() {
  if (initComputerScore < initHumanScore) {
-   console.log (`You got ${initHumanScore} point(s). You won!`)
+   console.log (`You got ${initHumanScore} point(s). You won!`);
  
   } else if (initComputerScore > initHumanScore) {
-   console.log (`You got ${initHumanScore} point(s). You lose!`)
+   console.log (`You got ${initHumanScore} point(s). You lose!`);
  
   } else if (initComputerScore = initHumanScore) {
-    console.log (`You got ${initHumanScore} point(s). It's a draw`)
+    console.log (`You got ${initHumanScore} point(s). It's a draw`);
   }
 }
 
 function playGame (){
   
   for (let i = 0; i<5 ; i++) {
-    
+
+    //Function will initialize again until game reaches 5 rounds  
+
   let compChoice = getComputerChoice ();
   let humChoice = getHumanChoice ();
   let humOptions = humChoice.toLowerCase();
   
+    // Assigned a different variable for the given functions. This variables are obtained as parameters for our playRound function.
+
   playRound (compChoice, humOptions);
 
   console.log (`Computer score = ${initComputerScore}`);
@@ -103,4 +107,6 @@ function playGame (){
   }
   
   finalScore(initComputerScore, initHumanScore);
+
+  // After the loop is finished. Scores were calculated to print the winner.
 }
