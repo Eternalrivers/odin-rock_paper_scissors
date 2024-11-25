@@ -37,4 +37,6 @@ Increment humanScore or computerScore by 1 depending on the round winner
 Task 5:
 Set a new game
   A new game consists of maximum of 5 rounds
-Repeat each round until either the player reached a score of 3.
+  Increment the winner's score by 1 each time the round ends
+Repeat each round until the game reaches 5 rounds
+Calculate the total scores to determine the winner
