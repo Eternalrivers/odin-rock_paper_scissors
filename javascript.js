@@ -97,7 +97,7 @@ function playGame (){
   
     // Assigned a different variable for the given functions. This variables are obtained as parameters for our playRound function.
 
-  playRound (compChoice, humOptions);
+  playRound (humOptions, compChoice);
 
   console.log (`Computer score = ${initComputerScore}`);
   console.log (`Human score = ${initHumanScore}`);
