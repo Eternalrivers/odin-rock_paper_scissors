@@ -9,9 +9,6 @@ function getComputerChoice(){
 
   let choice = getRandom ();
 
-  console.log (choice);
-
-  
   if (choice < 34 && choice > 0) {
    return ("rock");
   
