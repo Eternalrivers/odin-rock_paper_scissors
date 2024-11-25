@@ -10,6 +10,7 @@ function getComputerChoice(){
   let choice = getRandom ();
 
   console.log (choice);
+
   
   if (choice < 34 && choice > 0) {
    return ("rock");
@@ -42,6 +43,7 @@ let computerChoice = getComputerChoice ();
 //uses string values from previous functions
 
 function playRound(humanChoice,computerChoice) {
+    
     console.log (humanChoice);
     console.log (computerChoice);
     
@@ -72,4 +74,33 @@ function playRound(humanChoice,computerChoice) {
       console.log ("You lose! Rock beats scissors.");
       return (++initComputerScore);
   }
+}
+
+function finalScore() {
+ if (initComputerScore < initHumanScore) {
+   console.log (`You got ${initHumanScore} point(s). You won!`)
+ 
+  } else if (initComputerScore > initHumanScore) {
+   console.log (`You got ${initHumanScore} point(s). You lose!`)
+ 
+  } else if (initComputerScore = initHumanScore) {
+    console.log (`You got ${initHumanScore} point(s). It's a draw`)
+  }
+}
+
+function playGame (){
+  
+  for (let i = 0; i<5 ; i++) {
+    
+  let compChoice = getComputerChoice ();
+  let humChoice = getHumanChoice ();
+  let humOptions = humChoice.toLowerCase();
+  
+  playRound (compChoice, humOptions);
+
+  console.log (`Computer score = ${initComputerScore}`);
+  console.log (`Human score = ${initHumanScore}`);
+  }
+  
+  finalScore(initComputerScore, initHumanScore);
 }
