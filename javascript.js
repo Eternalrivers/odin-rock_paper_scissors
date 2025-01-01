@@ -86,11 +86,6 @@ function finalScore() {
 }
 
 function playGame (){
-  
-  for (let i = 0; i<5 ; i++) {
-
-    //Function will initialize again until game reaches 5 rounds  
-
   let compChoice = getComputerChoice ();
   let humChoice = getHumanChoice ();
   let humOptions = humChoice.toLowerCase();
@@ -105,5 +100,4 @@ function playGame (){
   
   finalScore(initComputerScore, initHumanScore);
 
-  // After the loop is finished. Scores were calculated to print the winner.
-}
+ 
