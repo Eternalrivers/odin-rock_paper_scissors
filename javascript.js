@@ -1,14 +1,14 @@
 function getRandom() {
-  return  Math.floor((Math.random()) * (100-1) + 1);
+  return  Math.floor((Math.random()) * 3);
 }
 //  A function that returns a random number between 100 and 0.
 function getComputerChoice(){
   const choice = getRandom ();
   
-  if (choice < 34 && choice > 0) {
+  if (choice == 1) {
    return ("rock");
   
-  } else if (choice < 67 && choice > 33) {
+  } else if (choice == 2) {
     return ("paper");
   
   }else  {
