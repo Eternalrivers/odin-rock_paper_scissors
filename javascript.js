@@ -71,21 +71,6 @@ function finalScore() {
   }
 }
 
-function playGame (getHumanChoice){
-  let compChoice = getComputerChoice ();
-  let humChoice = getHumanChoice ();
-  let humOptions = humChoice.toLowerCase();
-  
-    // Assigned a different variable for the given functions. This variables are obtained as parameters for our playRound function.
-
-  playRound (humOptions, compChoice);
-
-  console.log (`Computer score = ${initComputerScore}`);
-  console.log (`Human score = ${initHumanScore}`);
-  }
-  
-  finalScore(initComputerScore, initHumanScore);
-
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
 const btnScissors = document.querySelector('#scissors');
