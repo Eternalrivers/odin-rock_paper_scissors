@@ -4,6 +4,7 @@ function getRandom() {
 //  A function that returns a random number between 100 and 0.
 function getComputerChoice(){
   const choice = getRandom ();
+  
   if (choice < 34 && choice > 0) {
    return ("rock");
   
@@ -17,20 +18,17 @@ function getComputerChoice(){
 // Random number generated is assigned a string value.
 
 function getHumanChoice() {
-  
   let userInput = prompt ("rock, paper, or scissors?");
 
-  return (userInput);
-  
+  return (userInput); 
 }
+
 let initHumanScore = 0;
 let initComputerScore = 0;
 
 //uses string values from previous functions
-function playRound(humanChoice,computerChoice) {
-  let humanSelection = getHumanChoice();
-  let humanChoice = humanSelection.toLowerCase();
-  let computerChoice = getComputerChoice ();
+function playRound(humanChoice) {
+  const computerChoice = getComputerChoice ();
     
   if (humanChoice === computerChoice) {
       console.log ("draw");
@@ -94,9 +92,10 @@ const btnScissors = document.querySelector('#scissors');
 
 //Able to receive the value from the button using the dataset.
 btnRock.addEventListener ('click', function(e) {
-  playRound (e.target.dataset.value, computerChoice);
+  playRound (e.target.dataset.value);
 });
 
 /**
  * The computerChoice variable has its variable in a constant value. Meaning that any presses of the button will result in the computer having the same choice.
+ * The variable computerChoice was removed moving the variable to the function itself.
  */
