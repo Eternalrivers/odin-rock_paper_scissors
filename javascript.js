@@ -5,13 +5,13 @@ function getRandom() {
 function getComputerChoice(){
   const choice = getRandom ();
   
-  if (choice == 1) {
-   return ("rock");
+    if (choice == 1) {
+      return ("rock");
+
+    }else if (choice == 2) {
+      return ("paper");
   
-  } else if (choice == 2) {
-    return ("paper");
-  
-  }else  {
+    }else {
     return ("scissors");
   }
 }
@@ -75,8 +75,19 @@ const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
 const btnScissors = document.querySelector('#scissors');
 
-//Able to receive the value from the button using the dataset.
+/**
+ * The computerChoice variable has its variable in a constant value. 
+ * Meaning that any presses of the button will result in the computer having the same choice.
+ * The variable computerChoice was removed as a parameter for playRound moving the variable to the function itself.
+ * 1st param for the playRound comes from the button using the dataset.
+ */
 btnRock.addEventListener ('click', function(e) {
+  playRound (e.target.dataset.value);
+});
+btnPaper.addEventListener ('click', function(e) {
+  playRound (e.target.dataset.value);
+});
+btnScissors.addEventListener ('click', function(e) {
   playRound (e.target.dataset.value);
 });
 
