@@ -15,6 +15,8 @@ function getComputerChoice(){
     return ("scissors");
   }
 }
+
+
 // Random number generated is assigned a string value.
 
 let initHumanScore = 0;
@@ -52,10 +54,6 @@ function playRound(humanChoice) {
         initComputerScore++;
         messageResult.textContent = ("You lose! Rock beats scissors.");
     } 
-  
-    hum.textContent =(`Human score ${initHumanScore}`);
-    comp.textContent =(`Computer score ${initComputerScore}`);
-  
   }
  
 function finalScore() {
@@ -71,7 +69,11 @@ const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
 const btnScissors = document.querySelector('#scissors');
 const btn = document.querySelectorAll ('button');
-
+const hum = document.querySelector('#humanScore');
+const comp = document.querySelector('#computerScore');
+const messageResult = document.querySelector('.message');
+const btns = document.querySelector("button");
+const div = document.querySelector('div');
 
 
 /**
@@ -84,15 +86,17 @@ btnRock.addEventListener ('click', function(e) {
   if (initComputerScore === 5 || initHumanScore === 5) {
     finalScore ();
     removeButtons();
-  
   } 
   playRound (e.target.dataset.value);
 
+  hum.textContent =(`Human score ${initHumanScore}`);
+  comp.textContent =(`Computer score ${initComputerScore}`);
+
   if (initComputerScore === 5 || initHumanScore === 5) {
-    finalScore ();
-    
+    finalScore ();  
 }
 });
+
 btnPaper.addEventListener ('click', function(e) {
   if (initComputerScore === 5 || initHumanScore === 5) {
     finalScore ();
@@ -100,6 +104,8 @@ btnPaper.addEventListener ('click', function(e) {
   
   } 
   playRound (e.target.dataset.value);
+  hum.textContent =(`Human score ${initHumanScore}`);
+  comp.textContent =(`Computer score ${initComputerScore}`);
 
   if (initComputerScore === 5 || initHumanScore === 5) {
     finalScore ();
@@ -112,6 +118,8 @@ btnScissors.addEventListener ('click', function(e) {
   
   } 
   playRound (e.target.dataset.value);
+  hum.textContent =(`Human score ${initHumanScore}`);
+  comp.textContent =(`Computer score ${initComputerScore}`);
 
   if (initComputerScore === 5 || initHumanScore === 5) {
     finalScore ();
@@ -122,11 +130,7 @@ btnScissors.addEventListener ('click', function(e) {
  * The computerChoice variable has its variable in a constant value. Meaning that any presses of the button will result in the computer having the same choice.
  * The variable computerChoice was removed moving the variable to the function itself.
  */
-const hum = document.querySelector('#humanScore');
-const comp = document.querySelector('#computerScore');
-const messageResult = document.querySelector('.message');
-const btns = document.querySelector("button");
-const div = document.querySelector('div');
+
 
 hum.textContent =(`Human score ${initHumanScore}`);
 comp.textContent =(`Computer score ${initComputerScore}`);
