@@ -17,12 +17,6 @@ function getComputerChoice(){
 }
 // Random number generated is assigned a string value.
 
-function getHumanChoice() {
-  let userInput = prompt ("rock, paper, or scissors?");
-
-  return (userInput); 
-}
-
 let initHumanScore = 0;
 let initComputerScore = 0;
 
